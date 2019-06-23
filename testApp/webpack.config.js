@@ -4,7 +4,7 @@ module.exports = {
   entry: './main.js',
 
   output: {
-    path: './',
+    path: path.resolve(__dirname),
     filename: 'index.js'
   },
 
@@ -14,20 +14,24 @@ module.exports = {
   },
 
   module: {
-    loaders: [
+    rules: [
       {
-        test: /\.js$/,
-        loader: path.resolve(__dirname + '../js-type-check-loader.js'),
-        options: {},
+        test: /\.jsx$/,
+        exclude: /node_modules/,
+        loader: path.resolve(__dirname, '../js-type-check-loader.js'),
+        options: {
+          configFile: '../type-config.js',
+          label: 'poop',
+        },
       },
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        loader: 'babel',
+        loader: 'babel-loader',
         query: {
-          presets: ['es2015', 'react']
+          presets: ['@babel/env', '@babel/react']
         }
-      }
+      },
     ]
   }
 }

@@ -1,0 +1,22 @@
+{
+  "name": "js-type-check-loader",
+  "version": "1.0.0",
+  "description": "",
+  "main": "js-type-check-loader.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devere-here/js-type-check-loader.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/devere-here/js-type-check-loader/issues"
+  },
+  "homepage": "https://github.com/devere-here/js-type-check-loader#readme",
+  "dependencies": {
+    "loader-utils": "^1.2.3"
+  }
+}
