@@ -1,4 +1,5 @@
 const path = require('path')
+const typeConfigFile = require('../type-config.js')
 
 module.exports = {
   entry: './main.js',
@@ -16,21 +17,21 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.jsx$/,
-        exclude: /node_modules/,
-        loader: path.resolve(__dirname, '../js-type-check-loader.js'),
-        options: {
-          configFile: '../type-config.js',
-          label: 'poop',
-        },
-      },
-      {
         test: /\.jsx?$/,
         exclude: /node_modules/,
         loader: 'babel-loader',
         query: {
           presets: ['@babel/env', '@babel/react']
         }
+      },
+      {
+        test: /\.jsx$/,
+        exclude: /node_modules/,
+        loader: path.resolve(__dirname, '../js-type-check-loader.js'),
+        options: {
+          configFile: typeConfigFile,
+          label: 'poop',
+        },
       },
     ]
   }

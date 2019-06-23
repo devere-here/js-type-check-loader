@@ -3,7 +3,6 @@ import React from 'react';
 class App extends React.Component {
   componentDidMount() {
     testFunc('soup', 4, { rockem: 'sockem robots' })
-
   }
 
   testFunc(string, num, obj) {
