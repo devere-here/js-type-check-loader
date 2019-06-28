@@ -1,4 +1,4 @@
-const update = require('./type-check-loader-helpers.js')
+const update = require('./type-check-loader-helpers.js').updateConfig
 
 const config = {
   './testApp/App.jsx': {

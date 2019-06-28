@@ -1,4 +1,5 @@
 import React from 'react';
+import { poop1 as helper1, poop2 as helper2 } from './helpers'
 
 class App extends React.Component {
   componentDidMount() {
